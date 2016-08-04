@@ -36,9 +36,14 @@ public class WarAndPeace {
 	}
 
 	public static void printMap(Map<String, List<String>> clusterMap) {
+		int clusterCount = 0, wordCount = 0;
 		for (String token : clusterMap.keySet())
-			if (clusterMap.get(token).size() > 1)
+			if (clusterMap.get(token).size() > 1) {
 				System.out.println(clusterMap.get(token));
+				clusterCount++;
+				wordCount += clusterMap.get(token).size();
+			}
+		System.out.println(clusterCount + "\t" + wordCount);
 	}
 
 	public static ArrayList<String> readFile(String path) throws Exception {
