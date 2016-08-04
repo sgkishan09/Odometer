@@ -37,7 +37,6 @@ public class ScoreCard {
 				Point[0] = Point[1] = 0;
 				Game[playerIndex]++;
 				if (isSet()) {
-					System.out.println("SET OVER!");
 					finishedSet[playerIndex] = finishedSet[playerIndex] + "\t" + Integer.toString(Game[playerIndex]);
 					finishedSet[(playerIndex + 1) % 2] = finishedSet[(playerIndex + 1) % 2] + "\t"
 							+ Integer.toString(Game[(playerIndex + 1) % 2]);
